@@ -273,7 +273,7 @@ docker container run --name spring_redis -p 6379:6379 -d redis
 
 ## Redis Config
  
-package com.hamitmizrak.innova_springboot.config;
+package com.hamitmizrak.config;
 
 import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
@@ -426,7 +426,7 @@ spring.cache.type=redis
 
 ## Redis Test Bean
 
-package com.hamitmizrak.innova_springboot.bean;
+package com.hamitmizrak.bean;
 
 import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.CommandLineRunner;
