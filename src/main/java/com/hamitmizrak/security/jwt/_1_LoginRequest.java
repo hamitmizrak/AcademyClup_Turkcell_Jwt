@@ -15,4 +15,5 @@ public class _1_LoginRequest {
     // Field
     private String username;
     private String password;
+
 }

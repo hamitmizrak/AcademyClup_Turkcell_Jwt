@@ -1,0 +1,19 @@
+// REGISTER
+METHOD => @PostMapping
+URL    => htpp://localhost:4444/api/auth/register
+
+{
+"username":"root",
+"password":"root",
+}
+
+-----------------------------------------
+
+//LOGIN
+METHOD => @PostMapping
+URL    => htpp://localhost:4444/api/auth/login
+
+{
+"username":"root",
+"password":"root",
+}

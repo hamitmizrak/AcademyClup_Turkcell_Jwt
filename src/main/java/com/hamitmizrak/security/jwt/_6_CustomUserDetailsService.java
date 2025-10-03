@@ -33,6 +33,8 @@ public class _6_CustomUserDetailsService implements UserDetailsService {
          UserDetails userDetails= User.builder()
                  .username(userEntity.getUsername())
                  .password(userEntity.getPassword())
+                 //.password("{noop}"+userEntity.getPassword())
+                 //.password("{noop}root")
                  //  .roles(String.valueOf(userEntity.getRole())) // 1.YOL
                  .roles(userEntity.getRole().toString()) //2.YOL
                  .build();
