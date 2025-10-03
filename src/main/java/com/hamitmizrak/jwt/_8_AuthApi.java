@@ -1,4 +1,4 @@
-package com.hamitmizrak.security.jwt;
+package com.hamitmizrak.jwt;
 
 import com.hamitmizrak.bean.PasswordEncoderBean;
 import com.hamitmizrak.error.ApiResult;
@@ -32,18 +32,20 @@ public class _8_AuthApi {
 
     // Field
     private ApiResult apiResult;
-    private _4_UserEntity userEntity;
+
 
     // REGISTER
     @PostMapping("/register")
     public ResponseEntity<ApiResult> userRegister(@RequestBody _2_RegisterRequest registerRequest) {
 
         // UserEntity Instance
-        userEntity = new _4_UserEntity();
+        _4_UserEntity userEntity; userEntity = new _4_UserEntity();
 
         // SET
         userEntity.setUsername(registerRequest.getUsername());
-        userEntity.setPassword(registerRequest.getPassword());
+        userEntity.setPassword(passwordEncoderBean.getPasswordEncoderBeanMethod()
+                        .encode(registerRequest.getPassword())
+                );
         userEntity.setRole(_3_Role.USER);
         // Kayıt
         iUserRepository.save(userEntity);
@@ -81,7 +83,7 @@ public class _8_AuthApi {
 
         // ApiResult
         ApiResult apiResult = ApiResult.builder()
-                .path("/api/auth/register")
+                .path("/api/auth/login")
                 .status(201)
                 .message(stringBuilder.toString())
                 .createdDate(new Date())

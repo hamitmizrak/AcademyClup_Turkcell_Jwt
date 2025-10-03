@@ -1,4 +1,4 @@
-package com.hamitmizrak.security.jwt;
+package com.hamitmizrak.jwt;
 
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;

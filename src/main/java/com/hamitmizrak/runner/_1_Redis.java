@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Order(1)
-public class _3_Redis implements CommandLineRunner {
+public class _1_Redis implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("[redis-up] docker run çağrılıyor...");

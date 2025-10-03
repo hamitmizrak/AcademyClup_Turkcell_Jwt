@@ -1,4 +1,4 @@
-package com.hamitmizrak.security.jwt;
+package com.hamitmizrak.jwt;
 
 import lombok.Getter;
 
