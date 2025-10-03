@@ -6,8 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class AcademyClupTurkcellJwtApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(AcademyClupTurkcellJwtApplication.class, args);
-	}
+    public static void main(String[] args) {
+        SpringApplication.run(AcademyClupTurkcellJwtApplication.class, args);
+    }
 
 }
